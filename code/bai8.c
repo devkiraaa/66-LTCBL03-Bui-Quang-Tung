@@ -16,6 +16,7 @@
                   }
                   else if(a * a + b * b == c * c || a * a + c * c == b * b || c * c + b * b == a * a){
                         printf("Tam giac vuong\n");
+                        if(a == b || b == c || a == c) printf("Tam giac vuong can");
                   }
                   else{
                         printf("Tam giac thuong\n");
