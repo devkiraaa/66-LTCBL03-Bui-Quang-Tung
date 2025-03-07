@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+      int main(){
+            int t,n;
+            printf("Nhap thang va nam\n");
+            scanf("%d %d", &t, &n);
+      if(t >= 1 && t <= 12){
+           if(n > 0){
+                  if(t == 1 || t == 3 || t == 5 || t == 7 || t == 8 || t == 10 || t == 12) printf("Thang %d nam %d co 31 ngay", t, n);
+                  else if(t == 4 || t == 6 || t == 9 || t == 11) printf("Thang %d nam %d co 30 ngay", t, n);
+                  else{
+                        if(n % 400 == 0 || (n % 4 == 0 && n % 100 != 0)){
+                              printf("Thang %d nam %d co 29 ngay", t, n);
+                        }
+                        else{
+                              printf("Thang %d nam %d co 28 ngay", t, n);
+                        }
+                  }
+           }
+           else{
+            printf("INVALID");
+           }
+      }
+      else printf("INVALID");
+      return 0;
+      }
