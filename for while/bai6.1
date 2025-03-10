@@ -1,0 +1,18 @@
+#include <stdio.h>
+      typedef long long ll;
+      int ucln(ll a, ll b){
+            while(b != 0){
+                  ll r = a % b;
+                  a = b;
+                  b = r;
+            }
+            return a;
+      }
+      int bcnn(ll a, ll b){
+           return (a * b) / ucln(a, b);
+      }
+      int main(){
+            ll a, b;
+            scanf("%lld %lld", &a, &b);
+           printf("%lld %lld", ucln(a,b), bcnn(a, b));
+      }
