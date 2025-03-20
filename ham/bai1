@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+      int x, y;
+      scanf("%d %d", &x, &y);
+      long long lt = pow(x, y);
+      printf("%lld", lt);
+      return 0;
+}
