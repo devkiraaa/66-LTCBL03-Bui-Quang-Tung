@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int np(long long n){
+      if(n < 2){
+            printf("%lld", n);
+      }
+      else{
+            np(n / 2);
+            printf("%lld", n % 2);
+      }
+}
+
+int bp(long long n){
+      if(n < 8){
+            printf("%lld", n);
+      }
+      else{
+            bp(n / 8);
+            printf("%lld", n % 8);
+      }
+}
+
+int tlp(long long n){
+      if(n < 16){
+            if(n <= 9)
+                  printf("%lld", n);
+            else
+                  printf("%c", n + 55);
+      }
+      else{
+            tlp(n / 16);
+            int r = n % 16;
+            if(r <= 9)
+                  printf("%d", r);
+            else
+                  printf("%c", r + 55);
+            }
+      }
+
+int main(){
+      long long n;
+      scanf("%lld", &n);
+      np(n);
+      printf("\n");
+      bp(n);
+      printf("\n");
+      tlp(n);
+}
